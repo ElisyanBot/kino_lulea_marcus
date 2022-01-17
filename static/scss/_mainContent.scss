@@ -11,55 +11,30 @@ main {
 }
 
 .main-container {
-  order: 1;
+  overflow-x: scroll;
+  display: flex;
+  gap: $content_standard_gap;
+
   width: 100%;
-  max-width: 575px;
+  max-width: $desktop;
   img {
+    width: 100%;
     &:hover {
       opacity: 0.7;
     }
   }
-  @media screen and (max-width: $desktop) {
-    max-width: 100%;
-    img {
-      object-fit: contain;
-      width: 100%;
-    }
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 
 .main-container-content-article-small {
-  margin-bottom: 13px;
-  width: 575px;
-
-  @media screen and (max-width: $tablet) {
-    width: 100%;
-  }
-}
-
-.main-container-content-article-large {
-  margin-bottom: 13px;
-  width: 575px;
-
-  @media screen and (max-width: $tablet) {
-    width: 100%;
-  }
-}
-
-.main-container-content-movie-comingsoon {
-  margin-bottom: 13px;
-  width: 575px;
-
-  @media screen and (max-width: $tablet) {
-    width: 100%;
-  }
-}
-
-.main-container-content-movie-availablenow {
-  margin-bottom: 13px;
-  width: 575px;
-
-  @media screen and (max-width: $tablet) {
-    width: 100%;
+  overflow: hidden;
+  border-radius: $bordRadius_standard;
+  background-color: gray;
+  min-width: 200px;
+  height: 300px;
+  img {
+    height: 50%;
   }
 }
