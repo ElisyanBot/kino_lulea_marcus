@@ -3,9 +3,10 @@ import { readFile } from "fs";
 
 const app = express();
 app.get("/", (req, res) => {
-  readFile("./static/index.html", "utf8", (err, data) => {
-    if (err) console.log("ERR: could not find local file");
-    res.status(200).send(data);
+  readFile("./static/index.html", "utf8", (error, data) => {
+    !error
+      ? res.status(200).send(data)
+      : console.log("ERR: could not find local file");
   });
 });
 
