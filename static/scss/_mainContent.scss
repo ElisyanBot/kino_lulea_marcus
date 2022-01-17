@@ -1,0 +1,65 @@
+@import "./Values/sizes";
+
+main {
+  width: 100%;
+  max-width: $desktop;
+  height: auto;
+  margin: 17px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-container {
+  order: 1;
+  width: 100%;
+  max-width: 575px;
+  img {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  @media screen and (max-width: $desktop) {
+    max-width: 100%;
+    img {
+      object-fit: contain;
+      width: 100%;
+    }
+  }
+}
+
+.main-container-content-article-small {
+  margin-bottom: 13px;
+  width: 575px;
+
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+  }
+}
+
+.main-container-content-article-large {
+  margin-bottom: 13px;
+  width: 575px;
+
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+  }
+}
+
+.main-container-content-movie-comingsoon {
+  margin-bottom: 13px;
+  width: 575px;
+
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+  }
+}
+
+.main-container-content-movie-availablenow {
+  margin-bottom: 13px;
+  width: 575px;
+
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+  }
+}

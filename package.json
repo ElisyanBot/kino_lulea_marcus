@@ -1,0 +1,21 @@
+{
+  "name": "kino_lulea_marcus",
+  "version": "1.0.0",
+  "description": "server side assignment for kino lulea",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodomon .",
+    "compSass":"npx sass static/scss/style.scss:static/css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcus Larsson <Marcus.b.larsson@outlook.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

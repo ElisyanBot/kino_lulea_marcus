@@ -1,0 +1,28 @@
+@import "./Values/sizes";
+
+.right-container {
+  order: 3;
+  width: 100%;
+  max-width: 315px;
+  @media screen and (max-width: $desktop) {
+    display: none;
+  }
+}
+
+.right-container-content-article-small {
+  margin-bottom: 13px;
+  width: 315px;
+}
+
+.right-container-content-search input {
+  margin-bottom: 13px;
+  width: 315px;
+  height: 33px;
+}
+
+.right-container-content-calendar {
+  margin-bottom: 13px;
+  width: 315px;
+  height: 540px;
+  background-color: #f5f5f5;
+}
