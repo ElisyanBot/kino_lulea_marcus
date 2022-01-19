@@ -12,7 +12,9 @@
   "author": "Marcus Larsson <Marcus.b.larsson@outlook.com>",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "node-fetch": "^3.1.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
