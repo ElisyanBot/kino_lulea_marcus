@@ -1,0 +1,13 @@
+@import "./Values/sizes";
+@import "./Values/colors";
+
+body {
+  margin: 0;
+  background-color: $main-bg-color;
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+
+  font-family: "Source Sans Pro", sans-serif;
+}

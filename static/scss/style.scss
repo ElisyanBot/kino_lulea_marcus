@@ -1,11 +1,17 @@
-@import "./header";
-@import "./mainContent";
-@import "./footer";
+@import "./body";
+@import "./logo";
+@import "./meny";
+@import "./main";
 
-body {
+* {
   margin: 0;
-  background-color: #261a4e;
-  background-image: url("../img/FW-edges-half-purple.jpg");
-  background-size: cover;
-  font-family: "Source Sans Pro", sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+html {
+  font-size: 62.5%;
 }

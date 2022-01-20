@@ -1,0 +1,60 @@
+@import "./Values/sizes";
+@import "./Values/colors";
+
+#meny-container {
+  width: 30rem;
+  @media screen and (max-width: $desktop) {
+    width: 10rem;
+  }
+}
+
+#main-meny {
+  display: flex;
+  flex-direction: column;
+  background-color: $main-color;
+  height: 100%;
+  width: 30rem;
+  @media screen and (max-width: $desktop) {
+    width: 10rem;
+  }
+
+  #meny-search {
+    align-self: center;
+    background-color: white;
+    width: 90%;
+    height: 4rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-radius: $borderRadius_round;
+    overflow: hidden;
+
+    @media screen and (max-width: $desktop) {
+      width: 80%;
+    }
+
+    input {
+      border: none;
+      width: 60%;
+      padding: 1rem 2rem;
+      @media screen and (max-width: $desktop) {
+        display: none;
+      }
+    }
+
+    button {
+      background-color: #69606a;
+      width: 20%;
+      height: 100%;
+
+      color: white;
+      border: none;
+      @media screen and (max-width: $desktop) {
+        width: 100%;
+      }
+    }
+  }
+
+  @import "./meny-nav";
+}
