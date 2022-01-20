@@ -4,12 +4,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/1c11390acb.js" crossorigin="anonymous"></script>
   <title> Kino Luleå </title>
 </head>
 <body>
-  {{> header }}
-  {{{ body }}}
-  {{> footer }}
+  <section id="meny-container">
+    {{>logo}}
+    <div id="main-meny">
+      {{> meny }}
+    </div>
+  </section>
+  <section id="main-content">
+     {{> header }}
+      {{{ body }}}
+  </section>
 </body>
 </html>

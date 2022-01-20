@@ -1,29 +1,10 @@
 <main>
   <!-- Middle - Main content -->
-  <div class="main-container">
-    <div class="main-container-content-article-small">
-      <a href="#"><img src="./img/mainContent/kommerSnart.jpg" /></a>
+  <div class="main-movie-container">
+    {{#each movies}}
+    <div id="{{id}}" class="movie-card">
+      <a href="http://localhost:5080/movies/{{id}}"><img src="{{attributes.image.url}}" /></a>
     </div>
-    <div class="main-container-content-article-small">
-      <a href="#"><img src="./img/mainContent/inIDimman.jpg" /></a>
-    </div>
-    <div class="main-container-content-article-small">
-      <a href="#"><img src="./img/mainContent/lillaMamma.jpg" /></a>
-    </div>
-    <div class="main-container-content-article-small">
-      <a href="#"><img src="img/mainContent/annette.jpg" /></a>
-    </div>
-    <div class="main-container-content-article-small">
-      <a href="#"><img src="./img/mainContent/visasNu.jpg" /></a>
-    </div>
-    <div class="main-container-content-article-small">
-      <a href="#"><img src="./img/mainContent/inIDimman.jpg" /></a>
-    </div>
-    <div class="main-container-content-article-small">
-      <a href="#"><img src="./img/mainContent/fromTheWildSea.jpg" /></a>
-    </div>
-    <div class="main-container-content-article-small">
-      <a href="#"><img src="./img/mainContent/martinEden.jpg" /></a>
-    </div>
+    {{/each}}
   </div>
 </main>
