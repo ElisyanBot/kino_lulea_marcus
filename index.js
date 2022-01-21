@@ -1,6 +1,7 @@
 import express from "express";
 import { movies } from "./backend/js/fetchApi.js";
 import { engine } from "express-handlebars";
+import { marked } from "marked";
 import path from "path";
 
 const app = express();
@@ -11,6 +12,9 @@ app.engine(
   engine({
     extname: "hbs",
     defaultLayout: "index",
+    helpers: {
+      markdown: (md) => marked(md),
+    },
   })
 );
 
