@@ -1,5 +1,5 @@
 import express from "express";
-import { movies } from "./static/js/fetchApi.js";
+import { movieObj } from "./fetchApi.js";
 import { engine } from "express-handlebars";
 import { marked } from "marked";
 
@@ -24,12 +24,12 @@ app.get("/", (req, res) => {
 });
 
 app.get("/movies", async (req, res) => {
-  const allMovies = await movies();
-  res.render("allMovies", { movies: allMovies });
+  const allMovies = await movieObj();
+  res.render("allMovies", { movies: allMovies.data });
 });
 
 app.get("/movies/:movieId", async (req, res) => {
-  const movie = await movies(req.params.movieId);
+  const movie = await movieObj(req.params.movieId);
   movie.data === null
     ? res.render("404page", {
         status: movie.error.status + ":",

@@ -10,8 +10,7 @@ async function fetchMovieApi(id = null) {
       : `https://lernia-kino-cms.herokuapp.com/api/movies/${id}`;
 
   const res = await fetch(uri);
-  const movieObj = await res.json();
-  return movieObj;
+  return await res.json();
 }
 
-export { fetchMovieApi as movies };
+export { fetchMovieApi as movieObj };
