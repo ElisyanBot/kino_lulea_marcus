@@ -5,7 +5,6 @@ import path from "path";
 
 const app = express();
 
-
 app.set("view engine", "hbs");
 app.engine(
   "hbs",
@@ -13,30 +12,32 @@ app.engine(
     extname: "hbs",
     defaultLayout: "index",
   })
-  );
-  
-app.use("/", express.static("./static"));
+);
+
+app.use("/", express.static("static"));
 
 app.get("/", (req, res) => {
   res.render("homepage", {});
 });
 
-app.get("/movies", (req, res) => {
-  movies().then((movieArr) => res.render(
-    "allMovies", 
-    { movies: movieArr.data}
-    ));
-  });
-  
-app.use("/movies", express.static("./static"));
-app.get("/movies/:movieId", (req, res) => {
-  movies(req.params.movieId).then((movie) => res.render("movie", {movie : movie.data.attributes}));
+app.get("/movies", async (req, res) => {
+  const allMovies = await movies();
+  res.render("allMovies", { movies: allMovies });
 });
 
-app.all("*",(req, res) =>{
-  res.render("404page",{message: "404: not found"})
-})
+app.get("/movies/:movieId", async (req, res) => {
+  const movie = await movies(req.params.movieId);
+  movie.data === null
+    ? res.render("404page", {
+        status: movie.error.status + ":",
+        message: movie.error.message,
+      })
+    : res.render("movie", { movie: movie.data.attributes });
+});
 
+app.all("*", (req, res) => {
+  res.render("404page", { status: "404:", message: " not found" });
+});
 
 app.listen(5080, () => {
   console.log(" \n ============ server is running ============= ");
