@@ -2,10 +2,10 @@
 @import "./Values/colors";
 
 #main-content {
-  height: 100vh;
+  height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
-  padding: 5rem 5rem 0 5rem;
+  padding: 5rem 5rem 5rem 5rem;
 }
 
 .hero-ad-container {
@@ -127,6 +127,33 @@ main {
       height: 100%;
       object-fit: cover;
       object-position: top;
+    }
+  }
+}
+
+.error-message {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+
+  width: 99%;
+  height: 50rem;
+  margin-top: 5rem;
+
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px rgba(107, 107, 107, 0.754);
+  overflow: hidden;
+
+  .text-container {
+    width: 50rem;
+    padding: 5rem;
+    margin: auto;
+    h1 {
+      font-size: 3.4rem;
+    }
+
+    h2 {
+      font-size: 2.8rem;
     }
   }
 }
