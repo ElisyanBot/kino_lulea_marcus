@@ -2,7 +2,8 @@ import express from "express";
 import { movieObj } from "./fetchApi.js";
 import { engine } from "express-handlebars";
 import { marked } from "marked";
-
+import { logger } from "./moiveLogger.js";
+ 
 const app = express();
 
 app.set("view engine", "hbs");
@@ -23,7 +24,7 @@ app.get("/", (req, res) => {
   res.render("homepage", {});
 });
 
-app.get("/movies", async (req, res) => {
+app.get("/movies", logger, async (req, res) => {
   const allMovies = await movieObj();
   res.render("allMovies", { movies: allMovies.data });
 });
