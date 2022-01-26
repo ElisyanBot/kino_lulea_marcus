@@ -1,0 +1,23 @@
+@import "./Values/sizes";
+@import "./Values/colors";
+
+@import "./Values/sizes";
+@import "./Values/colors";
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+#main-content {
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 5rem 5rem 5rem 5rem;
+}
+
+@import "./parts/banner";
+@import "./parts/home-article";
+@import "./parts/allMoives";
+@import "./parts/movie-article";
+@import "./parts/404artical";
