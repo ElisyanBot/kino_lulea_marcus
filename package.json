@@ -5,9 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "npx sass static/scss/style.scss:static/css/style.css && node .",
-    "dev": "npx sass static/scss/style.scss:static/css/style.css && nodemon .",
-    "scss": "npx sass --watch static/scss/style.scss:static/css/style.css",
+    "start": "npx sass src/scss/style.scss:static/css/style.css && node .",
+    "dev": "npx sass src/scss/style.scss:static/css/style.css && nodemon .",
+    "scss": "npx sass --watch src/scss/style.scss:static/css/style.css",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "author": "Marcus Larsson <Marcus.b.larsson@outlook.com>",
