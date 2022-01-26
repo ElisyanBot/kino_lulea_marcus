@@ -1,4 +1,4 @@
-import { movieObj } from "../static/js/fetchApi.js";
+import { movieObj } from "../src/js/fetchApi.js";
 
 test("check to se that the ID param on fetchMovieApi retreives single movie with the right id", async () => {
   const param_ID = 1;

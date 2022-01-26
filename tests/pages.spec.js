@@ -1,4 +1,4 @@
-import app from "../static/js/app.js";
+import app from "../src/js/app.js";
 import request from "supertest";
 import { response } from "express";
 
